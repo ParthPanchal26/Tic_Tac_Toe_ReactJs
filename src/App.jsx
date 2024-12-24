@@ -1,8 +1,14 @@
-import React from 'react'
+import './App.css'
+import Board from './Tic_Tac_Toe/Board'
 
-const App = () => {
+function App() {
+
   return (
-    <div>App</div>
+
+    <div className="App">
+      <Board />
+    </div>
+
   )
 }
 
