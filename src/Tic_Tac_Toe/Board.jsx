@@ -4,9 +4,13 @@ import Square from './Square'
 const Board = () => {
 
     const [state, setState] = React.useState(Array(9).fill(null));
+    const [isXTurn, setIsXTurn] = React.useState(true);
 
     const handleClick = (index) => {
-        console.log(`clicked on index: ${index}`)
+        const copyState = [...state]
+        copyState[index] = isXTurn ? 'X' : 'O'
+        setState(copyState)
+        setIsXTurn(!isXTurn)
     }
 
 
