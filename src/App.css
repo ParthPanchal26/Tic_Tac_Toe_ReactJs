@@ -61,3 +61,7 @@ button:hover {
 .square:hover {
   font-size: 18px;
 }
+
+.player-name {
+  width: 150px;
+}
