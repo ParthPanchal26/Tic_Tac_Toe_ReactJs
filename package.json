@@ -2,7 +2,7 @@
   "homepage": "https://ParthPanchal26.github.io/Tic_Tac_Toe_ReactJs",
   "name": "tictactoe-react",
   "private": true,
-  "version": "2.1.0",
+  "version": "2.1.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
