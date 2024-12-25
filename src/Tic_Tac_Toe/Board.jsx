@@ -5,6 +5,8 @@ const Board = () => {
 
     const [state, setState] = React.useState(Array(9).fill(null));
     const [isXTurn, setIsXTurn] = React.useState(true);
+    const [player_1, setPlayer_1] = React.useState("");
+    const [player_2, setPlayer_2] = React.useState("");
 
     const checkWinner = () => {
         const winnerLogic = [
@@ -43,7 +45,6 @@ const Board = () => {
         setState(Array(9).fill(null))
     }
 
-
     return (
 
         <div className="board-container">
@@ -52,13 +53,17 @@ const Board = () => {
             {isWinner ?
                 <>
                     <div className="board-row-tracker border-bottom">
-                        <h3>{isWinner} Won</h3>
+                        <h3>{isWinner === 'X' ? player_1 : player_2} Won</h3>
                         <button onClick={playAgain}>Play again</button>
                     </div>
                 </> :
                 <>
+                    <div className="board-row-tracker">
+                        <input type="text" onChange={(e) => setPlayer_1(e.target.value)} placeholder='Player 1 name: ' />
+                        <input type="text" onChange={(e) => setPlayer_2(e.target.value)} placeholder='Player 2 name: ' />
+                    </div>
                     <div className='board-row-tracker'>
-                        <h3>Player {isXTurn ? "X" : "O"} Turn</h3>
+                        <h3>{isXTurn ? (player_1 + " X") : (player_2 + " O")} Turn</h3>
                         <button onClick={playAgain}>ReStart Game</button>
                     </div>
                     <div className="board-row">
