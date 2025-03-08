@@ -59,8 +59,8 @@ const Board = () => {
                 </> :
                 <>
                     <div className="board-row-tracker">
-                        <input className='player-name' type="text" onChange={(e) => setPlayer_1(e.target.value)} value={player_1} placeholder='Player 1 name: ' />
-                        <input className='player-name' type="text" onChange={(e) => setPlayer_2(e.target.value)} value={player_2} placeholder='Player 2 name: ' />
+                        <input className='player-name' type="text" onChange={(e) => setPlayer_1(e.target.value)} placeholder='Player 1 name: ' />
+                        <input className='player-name' type="text" onChange={(e) => setPlayer_2(e.target.value)} placeholder='Player 2 name: ' />
                     </div>
                     <div className='board-row-tracker'>
                         <h3>{isXTurn ? (player_1 + " X") : (player_2 + " O")} Turn</h3>
